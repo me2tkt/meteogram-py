@@ -26,7 +26,7 @@ wind_direction_data = [180, 345, 355, 1, 355, 354, 356]
 dates = []
 date = datetime(2016, 12, 25, 12, 0)
 dates.append(date)
-for x in xrange(len(temperature_data) - 1):
+for x in range(len(temperature_data) - 1):
     date = date + timedelta(seconds=3600)
     dates.append(date)
 
