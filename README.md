@@ -3,6 +3,7 @@ Meteogram-py was designed to be an easier to use interface around Matplotlib for
 
 #Changes
 Changed keyerror problem in __init__.py
+
 Changed xrange() to range() in example (Python 3)
 
 # Installation
