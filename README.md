@@ -1,6 +1,10 @@
 #Overview
 Meteogram-py was designed to be an easier to use interface around Matplotlib for the very specific use case of plotting a Meteogram. Meteograms are a very common way of exploring and displaying weather data.
 
+#Changes
+Changed keyerror problem in __init__.py
+Changed xrange() to range() in example (Python 3)
+
 # Installation
 
 ## Prerequisistes
