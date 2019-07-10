@@ -7,7 +7,7 @@ class Variable(object):
     def __init__(self, style, data=None):
         try:
             self.label = style['label']
-        except KeyError, e:
+        except KeyError as e:
             self.label = None
 
         self._style = style
@@ -61,7 +61,7 @@ class SubPlot:
         self._right_ylim = None
         try:
             self._left_vars = [var for var in left_vars]
-        except Exception, e:
+        except Exception as e:
             self._left_vars = [left_vars]
 
         self._right_var = right_var
@@ -127,7 +127,7 @@ class Meteogram(object):
 
         try:
             self._subplots = [plot for plot in subplots]
-        except Exception, e:
+        except Exception as e:
             self._subplots = [subplots]
         self._plotted = []
 
@@ -143,7 +143,7 @@ class Meteogram(object):
     def variable(cls, style, data=None):
         try:
             return PLOT_TYPES[style['plot_type']](style['mpl_options'], data)
-        except KeyError, e:
+        except KeyError as e:
             raise Exception('plot_type of %s is unknown.' % style['plot_type'])
 
     def show(self):
